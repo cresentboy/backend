@@ -2,26 +2,6 @@ package com.atguigu.market_analysis
 
 import java.sql.Timestamp
 
-import org.apache.flink.api.common.functions.AggregateFunction
-import org.apache.flink.api.common.state.{ValueState, ValueStateDescriptor}
-import org.apache.flink.streaming.api.TimeCharacteristic
-import org.apache.flink.streaming.api.functions.KeyedProcessFunction
-import org.apache.flink.streaming.api.scala._
-import org.apache.flink.streaming.api.scala.function.WindowFunction
-import org.apache.flink.streaming.api.windowing.time.Time
-import org.apache.flink.streaming.api.windowing.windows.TimeWindow
-import org.apache.flink.util.Collector
-
-/**
-  * Copyright (c) 2018-2028 尚硅谷 All Rights Reserved 
-  *
-  * Project: UserBehaviorAnalysis
-  * Package: com.atguigu.market_analysis
-  * Version: 1.0
-  *
-  * Created by wushengran on 2020/8/17 11:01
-  */
-
 // 定义输入输出样例类
 case class AdClickLog(userId: Long, adId: Long, province: String, city: String, timestamp: Long)
 case class AdClickCountByProvince(windowEnd: String, province: String, count: Long)

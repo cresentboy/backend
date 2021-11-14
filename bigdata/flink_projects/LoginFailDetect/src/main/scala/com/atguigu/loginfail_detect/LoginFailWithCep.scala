@@ -2,23 +2,6 @@ package com.atguigu.loginfail_detect
 
 import java.util
 
-import org.apache.flink.cep.PatternSelectFunction
-import org.apache.flink.cep.scala.CEP
-import org.apache.flink.cep.scala.pattern.Pattern
-import org.apache.flink.streaming.api.TimeCharacteristic
-import org.apache.flink.streaming.api.functions.timestamps.BoundedOutOfOrdernessTimestampExtractor
-import org.apache.flink.streaming.api.scala._
-import org.apache.flink.streaming.api.windowing.time.Time
-
-/**
-  * Copyright (c) 2018-2028 尚硅谷 All Rights Reserved 
-  *
-  * Project: UserBehaviorAnalysis
-  * Package: com.atguigu.loginfail_detect
-  * Version: 1.0
-  *
-  * Created by wushengran on 2020/8/17 15:33
-  */
 object LoginFailWithCep {
   def main(args: Array[String]): Unit = {
     val env = StreamExecutionEnvironment.getExecutionEnvironment

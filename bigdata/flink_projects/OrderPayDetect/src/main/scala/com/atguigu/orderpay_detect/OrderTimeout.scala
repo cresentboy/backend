@@ -2,23 +2,6 @@ package com.atguigu.orderpay_detect
 
 import java.util
 
-import org.apache.flink.cep.{PatternSelectFunction, PatternTimeoutFunction}
-import org.apache.flink.cep.scala.CEP
-import org.apache.flink.cep.scala.pattern.Pattern
-import org.apache.flink.streaming.api.TimeCharacteristic
-import org.apache.flink.streaming.api.scala._
-import org.apache.flink.streaming.api.windowing.time.Time
-
-/**
-  * Copyright (c) 2018-2028 尚硅谷 All Rights Reserved 
-  *
-  * Project: UserBehaviorAnalysis
-  * Package: com.atguigu.orderpay_detect
-  * Version: 1.0
-  *
-  * Created by wushengran on 2020/8/18 10:48
-  */
-
 // 定义输入输出样例类类型
 case class OrderEvent(orderId: Long, eventType: String, txId: String, timestamp: Long)
 case class OrderResult(orderId: Long, resultMsg: String)

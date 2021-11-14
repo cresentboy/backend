@@ -1,20 +1,5 @@
 package com.atguigu.orderpay_detect
 
-import org.apache.flink.api.common.state.{ValueState, ValueStateDescriptor}
-import org.apache.flink.streaming.api.TimeCharacteristic
-import org.apache.flink.streaming.api.functions.KeyedProcessFunction
-import org.apache.flink.streaming.api.scala._
-import org.apache.flink.util.Collector
-
-/**
-  * Copyright (c) 2018-2028 尚硅谷 All Rights Reserved 
-  *
-  * Project: UserBehaviorAnalysis
-  * Package: com.atguigu.orderpay_detect
-  * Version: 1.0
-  *
-  * Created by wushengran on 2020/8/18 11:45
-  */
 object OrderTimeoutWithoutCep {
   def main(args: Array[String]): Unit = {
     val env = StreamExecutionEnvironment.getExecutionEnvironment

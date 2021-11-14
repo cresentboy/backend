@@ -1,21 +1,5 @@
 package com.atguigu.orderpay_detect
 
-import org.apache.flink.api.common.state.{ValueState, ValueStateDescriptor}
-import org.apache.flink.streaming.api.TimeCharacteristic
-import org.apache.flink.streaming.api.functions.co.{CoProcessFunction, KeyedCoProcessFunction}
-import org.apache.flink.streaming.api.scala._
-import org.apache.flink.util.Collector
-
-/**
-  * Copyright (c) 2018-2028 尚硅谷 All Rights Reserved 
-  *
-  * Project: UserBehaviorAnalysis
-  * Package: com.atguigu.orderpay_detect
-  * Version: 1.0
-  *
-  * Created by wushengran on 2020/8/18 14:30
-  */
-
 // 定义到账事件样例类
 case class ReceiptEvent(txId: String, payChannel: String, timestamp: Long)
 
