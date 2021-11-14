@@ -29,6 +29,7 @@ object KafkaSinkTest {
         SensorReading(arr(0), arr(1).toLong, arr(2).toDouble).toString
       } )
 
+    //写入到kafka的另一个主题
     dataStream.addSink( new FlinkKafkaProducer011[String]("localhost:9092", "sinktest", new SimpleStringSchema()) )
 
     env.execute("kafka sink test")

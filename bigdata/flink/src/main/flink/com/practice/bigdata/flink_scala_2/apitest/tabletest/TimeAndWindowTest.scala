@@ -22,7 +22,7 @@ object TimeAndWindowTest {
     val tableEnv = StreamTableEnvironment.create(env, settings)
 
     // 读取数据
-    val inputPath = "D:\\Projects\\BigData\\FlinkTutorial\\src\\main\\resources\\sensor.txt"
+    val inputPath = "C:\\Users\\formalhaut\\OneDrive\\桌面\\项目\\bigdata\\flink\\src\\main\\resources\\sensor.txt"
     val inputStream = env.readTextFile(inputPath)
     //    val inputStream = env.socketTextStream("localhost", 7777)
 
@@ -86,8 +86,8 @@ object TimeAndWindowTest {
     overResultTable.toAppendStream[Row].print("result")
     overResultSqlTable.toRetractStream[Row].print("sql")
 
-//    sensorTable.printSchema()
-//    sensorTable.toAppendStream[Row].print()
+//    sensorTable.printSchema()   //打印表结构
+//    sensorTable.toAppendStream[Row].print()  //输出追加流
 
     env.execute("time and window test")
   }

@@ -10,15 +10,7 @@ import org.apache.flink.table.api.scala._
 import org.apache.flink.table.functions.ScalarFunction
 import org.apache.flink.types.Row
 
-/**
-  * Copyright (c) 2018-2028 尚硅谷 All Rights Reserved 
-  *
-  * Project: FlinkTutorial
-  * Package: com.atguigu.apitest.tabletest.udftest
-  * Version: 1.0
-  *
-  * Created by wushengran on 2020/8/11 17:04
-  */
+
 object ScalarFunctionTest {
   def main(args: Array[String]): Unit = {
     val env = StreamExecutionEnvironment.getExecutionEnvironment
@@ -32,7 +24,7 @@ object ScalarFunctionTest {
     val tableEnv = StreamTableEnvironment.create(env, settings)
 
     // 读取数据
-    val inputPath = "D:\\Projects\\BigData\\FlinkTutorial\\src\\main\\resources\\sensor.txt"
+    val inputPath = "C:\\Users\\formalhaut\\OneDrive\\桌面\\项目\\bigdata\\flink\\src\\main\\resources\\sensor.txt"
     val inputStream = env.readTextFile(inputPath)
     //    val inputStream = env.socketTextStream("localhost", 7777)
 

@@ -7,15 +7,7 @@ import org.apache.flink.streaming.api.scala._
 
 import java.sql.{Connection, DriverManager, PreparedStatement}
 
-/**
-  * Copyright (c) 2018-2028 尚硅谷 All Rights Reserved 
-  *
-  * Project: FlinkTutorial
-  * Package: com.atguigu.apitest.sinttest
-  * Version: 1.0
-  *
-  * Created by wushengran on 2020/8/7 11:22
-  */
+
 object JdbcSinkTest {
   def main(args: Array[String]): Unit = {
     val env = StreamExecutionEnvironment.getExecutionEnvironment

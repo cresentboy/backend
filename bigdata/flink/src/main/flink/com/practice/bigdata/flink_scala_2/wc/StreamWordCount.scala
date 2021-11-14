@@ -28,6 +28,7 @@ object StreamWordCount {
       .sum(1)
 
     resultDataStream.print().setParallelism(1)
+//    resultDataStream.print()
 
     // 启动任务执行
     env.execute("stream word count")
